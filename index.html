@@ -8,8 +8,27 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Password Screen -->
+    <div id="password-screen">
+    <div class="password-box">
+        <div class="lock">🔐</div>
+        <h1>♡ A Little Secret ♡</h1>
+        <p>Some memories are meant for special people.</p>
+        
+        <input 
+            type="password" 
+            id="password-input" 
+            placeholder="Enter the password ♡"
+        >
+        
+        <button onclick="checkPassword()">Unlock Our Memories ✨</button>
+        
+        <p id="error-message"></p>
+    </div>
+</div>
 
     <header>
+        <div id="scrapbook-content">
         <h1>ღOur Scrapbook ღ</h1>
     <p>Little moments • Big memories • Just us ♡</p>
     </header>
