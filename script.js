@@ -263,14 +263,53 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function checkPassword() {
-    const correctPassword = "2nd Anniversary";
-    const enteredPassword = document.getElementById("password-input").value;
+    const correctPassword = "BestiesForever";
+    const enteredPassword = document
+        .getElementById("password-input")
+        .value;
+
+    const passwordScreen = document.getElementById("password-screen");
+    const passwordBox = document.querySelector(".password-box");
+    const scrapbook = document.getElementById("scrapbook-content");
+    const errorMessage = document.getElementById("error-message");
 
     if (enteredPassword === correctPassword) {
-        document.getElementById("password-screen").style.display = "none";
-        document.getElementById("scrapbook-content").style.display = "block";
+
+        // Clear any error message
+        errorMessage.textContent = "";
+
+        // Reveal the scrapbook
+        scrapbook.classList.add("show");
+
+        // Fade away the password screen
+        passwordScreen.classList.add("unlocked");
+
+        // Remove password screen after animation
+        setTimeout(() => {
+            passwordScreen.style.display = "none";
+        }, 800);
+
     } else {
-        document.getElementById("error-message").textContent =
-            "Oops! That's not the secret password 🥹💕";
-    }
+
+    errorMessage.textContent =
+        "Oops! That's not the secret password 🥹💕";
+
+    document.getElementById("password-input").value = "";
+
+    passwordBox.classList.add("shake");
+
+    setTimeout(() => {
+        passwordBox.classList.remove("shake");
+    }, 500);
 }
+
+
+document
+    .getElementById("password-input")
+    .addEventListener("keypress", function(event) {
+
+        if (event.key === "Enter") {
+            checkPassword();
+        }
+
+    });
