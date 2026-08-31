@@ -293,3 +293,86 @@ header p {
     max-width: 560px;
     margin: 0 auto;
 }
+
+/* Hide the scrapbook until the password is entered */
+#scrapbook-content {
+    display: none;
+}
+
+/* Full-screen password page */
+#password-screen {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFF7EF;
+    background-image: radial-gradient(#D9B6A3 1px, transparent 1px);
+    background-size: 20px 20px;
+    padding: 20px;
+}
+
+/* Password box */
+.password-box {
+    background: #FFFDF8;
+    padding: 50px 40px;
+    max-width: 450px;
+    width: 100%;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 6px 8px 20px rgba(80, 60, 50, 0.15);
+}
+
+/* Lock emoji */
+.lock {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+/* Title */
+.password-box h1 {
+    color: #B85C78;
+    font-family: cursive;
+    font-size: 2.3rem;
+    margin-bottom: 15px;
+}
+
+/* Message */
+.password-box p {
+    color: #5C4545;
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+}
+
+/* Password input */
+#password-input {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #E8A6B8;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+/* Unlock button */
+.password-box button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: #B85C78;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.password-box button:hover {
+    transform: scale(1.02);
+}
+
+/* Error message */
+#error-message {
+    color: #C94C4C;
+    min-height: 20px;
+    margin-top: 15px;
+}
