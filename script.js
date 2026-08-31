@@ -267,7 +267,6 @@ function checkPassword() {
 
     const passwordInput = document.getElementById("password-input");
     const passwordScreen = document.getElementById("password-screen");
-    const passwordBox = document.querySelector(".password-box");
     const scrapbook = document.getElementById("scrapbook-content");
     const errorMessage = document.getElementById("error-message");
 
@@ -277,9 +276,13 @@ function checkPassword() {
 
         errorMessage.textContent = "";
 
+        // Show the scrapbook
         scrapbook.classList.add("show");
+
+        // Fade away the password screen
         passwordScreen.classList.add("unlocked");
 
+        // Remove the password screen completely
         setTimeout(function () {
             passwordScreen.style.display = "none";
         }, 800);
@@ -288,28 +291,23 @@ function checkPassword() {
 
         errorMessage.textContent =
             "Oops! That's not the secret password 🥹💕";
-
-        passwordInput.value = "";
-
-        passwordBox.classList.add("shake");
-
-        setTimeout(function () {
-            passwordBox.classList.remove("shake");
-        }, 500);
     }
 }
+
 
 /* Allow the Enter key to unlock the scrapbook */
 document.addEventListener("DOMContentLoaded", function () {
 
     const passwordInput = document.getElementById("password-input");
 
-    passwordInput.addEventListener("keydown", function (event) {
+    if (passwordInput) {
+        passwordInput.addEventListener("keydown", function (event) {
 
-        if (event.key === "Enter") {
-            checkPassword();
-        }
+            if (event.key === "Enter") {
+                checkPassword();
+            }
 
-    });
+        });
+    }
 
 });
