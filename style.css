@@ -1,0 +1,295 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+   background-color: #fff0eb;
+    background-image: 
+        radial-gradient(#A8B89F 1px, transparent 1px),
+        radial-gradient(#f7b8a5 1px, transparent 1px);
+    background-size: 32px 32px;
+    background-position: 0 0, 16px 16px;
+    font-family: 'Patrick Hand', cursive;
+    color: #5c4033;
+    min-height: 100vh;
+    padding-bottom: 60px;
+}
+
+/* Header at the top */
+header {
+    text-align: center;
+    padding: 45px 20px 30px;
+}
+
+header h1 {
+    font-family: 'Caveat', cursive;
+    font-size: 4.2rem;
+    color: #e85a4f;
+    text-shadow: 3px 3px 0 #ffe4d6;
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 1.5rem;
+    color: #000000;
+    margin-top: 12px;
+    font-family: 'Patrick Hand', cursive;
+    letter-spacing: 1px;
+}
+
+/* Scrapbook grid */
+.scrapbook {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+/* Cute Polaroid cards */
+.polaroid {
+    background: #fffdf9;
+    padding: 14px 14px 45px 14px;
+    width: 230px;
+    box-shadow: 8px 12px 20px rgba(0, 0, 0, 0.18);
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    transform: rotate(-3deg);
+    transition: all 0.3s ease;
+    border: 10px solid #f5d6c8;
+}
+
+.polaroid:nth-child(even) {
+    transform: rotate(2.5deg);
+}
+
+.polaroid:nth-child(3n) {
+    transform: rotate(-1.5deg);
+}
+
+.polaroid:hover {
+    transform: scale(1.07) rotate(0deg) !important; 
+    z-index: 20;
+    box-shadow: 10px 16px 28px rgba(0, 0, 0, 0.25);
+}
+
+/* Unique rotations */
+.p1 { transform: rotate(-4deg); }
+.p2 { transform: rotate(3deg); }
+.p3 { transform: rotate(-2deg); }
+.p4 { transform: rotate(5deg); }
+.p5 { transform: rotate(-3deg); }
+.p6 { transform: rotate(2deg); }
+.p7 { transform: rotate(-5deg); }
+.p8 { transform: rotate(4deg); }
+.p9 { transform: rotate(-1deg); }
+.p10 { transform: rotate(3deg); }
+.p11 { transform: rotate(-4deg); }
+
+/* Washi tape strip */
+.washi {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-2deg);
+    width: 90px;
+    height: 22px;
+    background: repeating-linear-gradient(
+        45deg,
+        #ff9a8b,
+        #ff9a8b 8px,
+        #ffb4a8 8px,
+        #ffb4a8 16px
+    );
+    box-shadow: 1px 2px 4px rgba(0,0,0,0.15);
+    z-index: 5;
+}
+
+/* Different washi colors per polaroid */
+.p1 .washi { background: repeating-linear-gradient(45deg, #ff9a8b, #ff9a8b 8px, #ffb4a8 8px, #ffb4a8 16px); }
+.p2 .washi { background: repeating-linear-gradient(45deg, #a0d2db, #a0d2db 8px, #c5e6ec 8px, #c5e6ec 16px); }
+.p3 .washi { background: repeating-linear-gradient(45deg, #f9c74f, #f9c74f 8px, #fbd978 8px, #fbd978 16px); }
+.p4 .washi { background: repeating-linear-gradient(45deg, #b8a9c9, #b8a9c9 8px, #d4c8e0 8px, #d4c8e0 16px); }
+.p5 .washi { background: repeating-linear-gradient(45deg, #90be6d, #90be6d 8px, #b5d99a 8px, #b5d99a 16px); }
+.p6 .washi { background: repeating-linear-gradient(45deg, #f4845f, #f4845f 8px, #f7a58a 8px, #f7a58a 16px); }
+.p7 .washi { background: repeating-linear-gradient(45deg, #e07a5f, #e07a5f 8px, #eba48f 8px, #eba48f 16px); }
+.p8 .washi { background: repeating-linear-gradient(45deg, #f2cc8f, #f2cc8f 8px, #f7dcb5 8px, #f7dcb5 16px); }
+.p9 .washi { background: repeating-linear-gradient(45deg, #81b29a, #81b29a 8px, #a8cbb8 8px, #a8cbb8 16px); }
+.p10 .washi { background: repeating-linear-gradient(45deg, #e5989b, #e5989b 8px, #efb6b8 8px, #efb6b8 16px); }
+.p11 .washi { background: repeating-linear-gradient(45deg, #9b5de5, #9b5de5 8px, #b98aec 8px, #b98aec 16px); }
+
+
+/* Photo styles */
+.photo, .photo-placeholder {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    display: block;
+    background: #fce8e0;
+    border: 1px solid #f0d5c8;
+}
+
+.photo-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    color: #c48b7a;
+}
+
+/* Caption */
+.caption {
+    margin-top: 14px;
+    font-family: 'Indie Flower', cursive;
+    font-size: 1.35rem;
+    color: #c26d5a;
+}
+
+/* Emoji decoration */
+.emoji {
+    position: absolute;
+    bottom: 12px;
+    right: 14px;
+    font-size: 1.4rem;
+}
+
+/* Final Quote Section */
+.final-quote {
+    max-width: 800px;
+    margin: 80px auto 40px;
+    padding: 0 20px;
+}
+
+.quote-box {
+    background: #fff9f5;
+    border: 3px dashed #e07a5f;
+    padding: 40px 30px;
+    text-align: center;
+    position: relative;
+    box-shadow: 8px 12px 0 #f7c5b8;
+}
+
+.quote-text {
+    font-family: 'Caveat', cursive;
+    font-size: 2rem;
+    line-height: 1.5;
+    color: #c44536;
+    margin-bottom: 18px;
+}
+
+.quote-sub {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.4rem;
+    color: #d4746a;
+}
+
+.hearts {
+    margin-top: 20px;
+    font-size: 1.6rem;
+    color: #e85a4f;
+    letter-spacing: 8px;
+}
+
+/* Modal (popup) styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(60, 30, 20, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal-content {
+    background-color: #fff9f5;
+    padding: 35px 30px 40px;
+    border-radius: 8px;
+    width: 100%;
+    border: 4px solid #e07a5f;
+    max-width: 780px;
+    position: relative;
+    box-shadow: 12px 16px 0 #f7c5b8;
+    text-align: center;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 32px;
+    cursor: pointer;
+    color: #e85a4f;
+    font-weight: bold;
+    z-index: 10;
+}
+
+.close-btn:hover {
+    color: #c44536;
+}
+
+.modal-washi {
+    height: 18px;
+    width: 140px;
+    margin: 0 auto 15px;
+    background: repeating-linear-gradient(
+        45deg,
+        #ff9a8b,
+        #ff9a8b 10px,
+        #ffb4a8 10px,
+        #ffb4a8 20px
+    );
+}
+
+.modal-washi.bottom {
+    margin: 25px auto 0;
+}
+
+#modal-title {
+    font-family: 'Caveat', cursive;
+    font-size: 2.6rem;
+    color: #e85a4f;
+    margin-bottom: 20px;
+}
+
+.modal-photos {
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px 0 25px ;
+}
+
+.modal-photos img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border: 6px solid white;
+    box-shadow: 4px 6px 12px rgba(0,0,0,0.15);
+    transform: rotate(-2deg);
+}
+
+.modal-photos img:nth-child(2) {
+    transform: rotate(3deg);
+}
+
+.modal-photos img:nth-child(3) {
+    transform: rotate(-1deg);
+}
+
+.heartfelt-message {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.5rem;
+    color: #8b5e3c;
+    max-width: 560px;
+    margin: 0 auto;
+}

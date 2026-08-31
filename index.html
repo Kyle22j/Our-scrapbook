@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Digital Scrapbook</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Patrick+Hand&family=Indie+Flower&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>ღOur Scrapbook ღ</h1>
+    <p>Little moments • Big memories • Just us ♡</p>
+    </header>
+
+    <main class="scrapbook">
+        <!-- Polaroid 1 -->
+    <div class="polaroid p1" data-index="0">
+        <div class="washi"></div>
+        <img src="images/High school.jpeg" alt="High school memory" class="photo">
+        <p class="caption">Day one vibes</p>
+        <span class="emoji">🌸</span>
+    </div>
+
+    <!-- Polaroid 2 -->
+    <div class="polaroid p2" data-index="1">
+        <div class="washi"></div>
+        <img src="images/fun time.jpeg" alt="Fun Time memory" class="photo">
+        <p class="caption">Chaos & giggles</p>
+        <span class="emoji">😂</span>
+    </div>
+
+    <!-- Polaroid 3 -->
+    <div class="polaroid p3" data-index="2">
+        <div class="washi"></div>
+        <img src="images/random.jpeg" alt="Random memory" class="photo">
+        <p class="caption">no context needed</p>
+        <span class="emoji">🫶</span>
+    </div>
+
+    <!-- Polaroid 4 -->
+    <div class="polaroid p4" data-index="3">
+        <div class="washi"></div>
+        <img src="images/UC.jpeg" alt="UC memory" class="photo">
+        <p class="caption">Bitter Saltyness</p>
+        <span class="emoji">⚖️</span>
+    </div>
+
+    <!-- Polaroid 5 -->
+    <div class="polaroid p5" data-index="4">
+        <div class="washi"></div>
+        <img src="images/birthday.jpeg" alt="Birthday memory" class="photo">
+        <p class="caption">Birthday</p>
+        <span class="emoji">🥳🥂</span>
+    </div>
+
+    <!-- Polaroid 6 -->
+    <div class="polaroid p6" data-index="5">
+        <div class="washi"></div>
+        <img src="images/SCHOOL.jpeg" alt="School memory" class="photo">
+        <p class="caption">Growing together</p>
+        <span class="emoji">🧠</span>
+    </div>
+
+    <!-- Polaroid 7 -->
+    <div class="polaroid p7" data-index="6">
+        <div class="waashi"></div>
+        <img src="images/shopping.jpeg" alt="Shopping memory" class="photo">
+        <p class="caption">Just one more thing</p>
+        <span class="emoji">🛍️</span>
+  </div>
+
+   <!-- Polaroid 8 -->
+    <div class="polaroid p8" data-index="7">
+        <div class="washi"></div>
+        <img src="images/Best shot.jpeg" alt="Best Shot memory" class="photo">
+        <p class="caption">Camera Loves Us</p>
+        <span class="emoji">📸</span>
+    </div>
+
+    <!-- Polaroid 9 -->
+    <div class="polaroid p9" data-index="8">
+        <div class="washi"></div>
+       <img src="images/date.jpeg" alt="Date memory" class="photo">
+        <p class="caption">Just Us</p>
+        <div class="emoji">💕</div>
+    </div>
+
+    <!-- Polaroid 10 -->
+    <div class="polaroid p10" data-index="9">
+        <div class="washi"></div>
+        <img src="images/African.jpeg" alt="African memory" class="photo">
+        <p class="caption">Rather better company to anything else</p>
+        <span class="emoji">🫂</span>
+    </div>
+
+    <!-- Polaroid 11 -->
+    <div class="polaroid p11" data-index="10">
+        <div class="washi"></div>
+        <img src="images/Graduation.jpeg" alt="Graduation memory" class="photo">
+        <p class="caption">We made it and always will</p>
+        <span class="emoji">🎓</span>
+    </div>
+    </main>
+
+<!-- Final Quote Section -->
+    <section class="final-quote">
+        <div class="quote-box">
+            <p class="quote-text">
+                “Through every chapter, every laugh, every adventure, every sorrow and every season — I’m grateful it was you beside me.”
+            </p>
+            <p class="quote-sub">So many memories, one forever friendship.</p>
+            <div class="hearts">♡ ♡ ♡</div>
+        </div>
+    </section>
+
+
+    <!-- Popup Modal -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <div class="modal-washi top"></div>
+        <h2 id="modal-title">Memory Title</h2>
+      <div class="modal-photos" id="modal-photos"></div>
+            <p id="modal-message" class="heartfelt-message"></p>
+            <div class="modal-washi bottom"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
