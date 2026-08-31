@@ -261,3 +261,16 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 });
+
+function checkPassword() {
+    const correctPassword = "2nd Anniversary";
+    const enteredPassword = document.getElementById("password-input").value;
+
+    if (enteredPassword === correctPassword) {
+        document.getElementById("password-screen").style.display = "none";
+        document.getElementById("scrapbook-content").style.display = "block";
+    } else {
+        document.getElementById("error-message").textContent =
+            "Oops! That's not the secret password 🥹💕";
+    }
+}
