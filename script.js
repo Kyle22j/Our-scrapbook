@@ -263,53 +263,53 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function checkPassword() {
-    const correctPassword = "BestiesForever";
-    const enteredPassword = document
-        .getElementById("password-input")
-        .value;
+    const correctPassword = "2024";
 
+    const passwordInput = document.getElementById("password-input");
     const passwordScreen = document.getElementById("password-screen");
     const passwordBox = document.querySelector(".password-box");
     const scrapbook = document.getElementById("scrapbook-content");
     const errorMessage = document.getElementById("error-message");
 
+    const enteredPassword = passwordInput.value;
+
     if (enteredPassword === correctPassword) {
 
-        // Clear any error message
         errorMessage.textContent = "";
 
-        // Reveal the scrapbook
         scrapbook.classList.add("show");
-
-        // Fade away the password screen
         passwordScreen.classList.add("unlocked");
 
-        // Remove password screen after animation
-        setTimeout(() => {
+        setTimeout(function () {
             passwordScreen.style.display = "none";
         }, 800);
 
     } else {
 
-    errorMessage.textContent =
-        "Oops! That's not the secret password 🥹💕";
+        errorMessage.textContent =
+            "Oops! That's not the secret password 🥹💕";
 
-    document.getElementById("password-input").value = "";
+        passwordInput.value = "";
 
-    passwordBox.classList.add("shake");
+        passwordBox.classList.add("shake");
 
-    setTimeout(() => {
-        passwordBox.classList.remove("shake");
-    }, 500);
+        setTimeout(function () {
+            passwordBox.classList.remove("shake");
+        }, 500);
+    }
 }
 
+/* Allow the Enter key to unlock the scrapbook */
+document.addEventListener("DOMContentLoaded", function () {
 
-document
-    .getElementById("password-input")
-    .addEventListener("keypress", function(event) {
+    const passwordInput = document.getElementById("password-input");
+
+    passwordInput.addEventListener("keydown", function (event) {
 
         if (event.key === "Enter") {
             checkPassword();
         }
 
     });
+
+});
