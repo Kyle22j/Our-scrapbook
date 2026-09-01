@@ -291,6 +291,16 @@ function checkPassword() {
 
         errorMessage.textContent =
             "Oops! That's not the secret password 🥹💕";
+
+        const passwordBox = document.querySelector(".password-box")
+
+        if (passwordBox) {
+        passwordBox.classList.remove("shake");
+
+        // Restart the animation
+        void passwordBox.offsetWidth;
+
+        passwordBox.classList.add("shake");
     }
 }
 
