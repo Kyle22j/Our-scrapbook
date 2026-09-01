@@ -129,9 +129,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Clear previous photos and add your photo
                 modalPhotos.innerHTML = `
                     <img src="images/SCHOOL.jpeg" alt="School memory">
-                    <img src="images/School 1.jpeg" alt="School memory">
-                    <img src="images/School 2.jpeg" alt="School memory">
-                    <img src="images/School 3.jpeg" alt="School memory">
+                    <img src="images/school 1.jpeg" alt="School memory">
+                    <img src="images/school 2.jpeg" alt="School memory">
+                    <img src="images/school 3.jpeg" alt="School memory">
                
                 `;
             } 
@@ -147,7 +147,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 // Clear previous photos and add your photo
                 modalPhotos.innerHTML = `
-                    <img src="images/best shot.jpeg" alt="Best shot memory">
+                    <img src="images/Best shot.jpeg" alt="Best shot memory">
                     <img src="images/best shot 1.jpeg" alt="Best shot memory">
                     <img src="images/best shot 2.jpeg" alt="Best shot memory">
                     <img src="images/Best shot 3.jpg" alt="Best shot memory">
