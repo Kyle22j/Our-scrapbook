@@ -274,23 +274,14 @@ function checkPassword() {
 
     if (enteredPassword === correctPassword) {
 
-    errorMessage.textContent = "";
+        errorMessage.textContent = "";
 
-        // Show the scrapbook
-    scrapbook.classList.add("show");
-    
-    // Allow the page to scroll again
-    document.body.classList.remove("locked");
+        scrapbook.classList.add("show");
+        passwordScreen.classList.add("unlocked");
 
-    // Fade away the password screen
-    passwordScreen.classList.add("unlocked");
-
-    // Remove the password screen completely
-    setTimeout(function () {
-        passwordScreen.style.display = "none";
-    }, 800);
-
-}
+        setTimeout(function () {
+            passwordScreen.style.display = "none";
+        }, 800);
 
     } else {
 
