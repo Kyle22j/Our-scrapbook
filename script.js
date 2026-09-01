@@ -113,6 +113,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 modalPhotos.innerHTML = `
                     <img src="images/birthday.jpeg" alt="Birthday memory">
                     <img src="images/birthday 1.jpeg" alt="Birthday memory">
+                    <img src="images/birthday 2.jpeg" alt="Birthday memory">
+                    <img src="images/birthday 3.jpeg" alt="Birthday memory">
               
                 `;
             } 
