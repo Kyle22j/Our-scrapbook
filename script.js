@@ -263,7 +263,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function checkPassword() {
-    const correctPassword = "BestiesForever";
+    const correctPassword = "2024";
 
     const passwordInput = document.getElementById("password-input");
     const passwordScreen = document.getElementById("password-screen");
