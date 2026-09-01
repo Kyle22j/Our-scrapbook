@@ -263,7 +263,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function checkPassword() {
-    const correctPassword = "2024";
+    const correctPassword = "BestiesForever";
 
     const passwordInput = document.getElementById("password-input");
     const passwordScreen = document.getElementById("password-screen");
@@ -291,9 +291,6 @@ function checkPassword() {
 
         errorMessage.textContent =
             "Oops! That's not the secret password 🥹💕";
-
-        const passwordBox = document.querySelector(".password-box")
-
     }
 }
 
