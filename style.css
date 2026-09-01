@@ -4,7 +4,9 @@
     padding: 0;
 }
 
-body {
+body.locked {
+    overflow: hidden;
+    height: 100vh;
    background-color: #fff0eb;
     background-image: 
         radial-gradient(#A8B89F 1px, transparent 1px),
