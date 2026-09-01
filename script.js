@@ -276,12 +276,16 @@ function checkPassword() {
 
     errorMessage.textContent = "";
 
+        // Show the scrapbook
     scrapbook.classList.add("show");
-    passwordScreen.classList.add("unlocked");
-
-    // Allow scrolling after unlocking
+    
+    // Allow the page to scroll again
     document.body.classList.remove("locked");
 
+    // Fade away the password screen
+    passwordScreen.classList.add("unlocked");
+
+    // Remove the password screen completely
     setTimeout(function () {
         passwordScreen.style.display = "none";
     }, 800);
