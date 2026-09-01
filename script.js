@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // For now we only customize the seventh polaroid (index 6)
             if (index === 6) {
                 modalTitle.textContent = "Shopping Day";
-                modalMessage.textContent = "Wecame to shop... but somehow the memories were the best thing we took home 😂💕.";
+                modalMessage.textContent = "We came to shop... but somehow the memories were the best thing we took home 😂💕.";
                 
                 // Clear previous photos and add your photo
                 modalPhotos.innerHTML = `
