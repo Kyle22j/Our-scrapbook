@@ -276,13 +276,9 @@ function checkPassword() {
 
         errorMessage.textContent = "";
 
-        // Show the scrapbook
         scrapbook.classList.add("show");
-
-        // Fade away the password screen
         passwordScreen.classList.add("unlocked");
 
-        // Remove the password screen completely
         setTimeout(function () {
             passwordScreen.style.display = "none";
         }, 800);
@@ -291,7 +287,25 @@ function checkPassword() {
 
         errorMessage.textContent =
             "Oops! That's not the secret password 🥹💕";
+
+        shakePasswordBox();
     }
+}
+
+
+function shakePasswordBox() {
+
+    const passwordBox = document.querySelector(".password-box");
+
+    if (!passwordBox) {
+        return;
+    }
+
+    passwordBox.classList.add("shake");
+
+    setTimeout(function () {
+        passwordBox.classList.remove("shake");
+    }, 500);
 }
 
 
@@ -301,6 +315,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const passwordInput = document.getElementById("password-input");
 
     if (passwordInput) {
+
         passwordInput.addEventListener("keydown", function (event) {
 
             if (event.key === "Enter") {
@@ -308,6 +323,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
         });
+
     }
 
 });
