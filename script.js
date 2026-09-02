@@ -329,3 +329,81 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 });
+
+function launchConfetti() {
+
+    const container = document.getElementById("confetti-container");
+
+    const colors = [
+        "#ff6b9a",
+        "#ffd166",
+        "#a8dadc",
+        "#cdb4db",
+        "#90dbf4",
+        "#ffadad"
+    ];
+
+    // Create confetti from different corners
+    const corners = [
+        { x: "0%", y: "0%" },
+        { x: "100%", y: "0%" },
+        { x: "0%", y: "100%" },
+        { x: "100%", y: "100%" }
+    ];
+
+    for (let i = 0; i < 80; i++) {
+
+        const confetti = document.createElement("div");
+
+        const randomCorner =
+            corners[Math.floor(Math.random() * corners.length)];
+
+        confetti.classList.add("confetti");
+
+        // Occasionally add hearts
+        if (Math.random() > 0.85) {
+
+            confetti.classList.add("heart");
+            confetti.innerHTML = "♥";
+
+            confetti.style.color =
+                colors[Math.floor(Math.random() * colors.length)];
+
+        } else {
+
+            confetti.style.backgroundColor =
+                colors[Math.floor(Math.random() * colors.length)];
+
+            // Occasionally make circles
+            if (Math.random() > 0.7) {
+                confetti.classList.add("circle");
+            }
+        }
+
+        confetti.style.left = randomCorner.x;
+        confetti.style.top = randomCorner.y;
+
+        // Random explosion direction
+        const randomX =
+            Math.floor(Math.random() * 800 - 400) + "px";
+
+        const randomY =
+            Math.floor(Math.random() * 800 - 400) + "px";
+
+        confetti.style.setProperty("--x", randomX);
+        confetti.style.setProperty("--y", randomY);
+
+        // Random delay
+        confetti.style.animationDelay =
+            Math.random() * 0.5 + "s";
+
+        container.appendChild(confetti);
+
+        // Remove after animation
+        setTimeout(() => {
+            confetti.remove();
+        }, 3500);
+
+    }
+
+}
