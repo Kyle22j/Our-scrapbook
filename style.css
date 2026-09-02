@@ -499,3 +499,43 @@ header p {
     }
 
 }
+
+/* =========================================
+   POLAROID ENTRANCE ANIMATION
+========================================= */
+
+/* Hide Polaroids before the animation starts */
+.polaroid {
+    opacity: 0;
+    transform: translateY(40px) scale(0.8);
+}
+
+/* This class starts the animation */
+.polaroid.show-polaroid {
+    animation: polaroidEntrance 0.7s ease-out forwards;
+}
+
+
+/* Cute bounce entrance */
+@keyframes polaroidEntrance {
+
+    0% {
+        opacity: 0;
+        transform: translateY(50px) scale(0.7);
+    }
+
+    60% {
+        opacity: 1;
+        transform: translateY(-12px) scale(1.08);
+    }
+
+    80% {
+        transform: translateY(5px) scale(0.96);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
