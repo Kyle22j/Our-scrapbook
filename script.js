@@ -276,6 +276,8 @@ function checkPassword() {
 
     if (enteredPassword === correctPassword) {
 
+        launchConfetti();
+
         errorMessage.textContent = "";
 
         scrapbook.classList.add("show");
