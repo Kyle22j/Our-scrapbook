@@ -446,3 +446,56 @@ header p {
         z-index: 1001;
     }
 }
+
+/* CONFETTI CONTAINER */
+
+#confetti-container {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 9999;
+}
+
+
+/* INDIVIDUAL CONFETTI */
+
+.confetti {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    opacity: 0;
+    animation: confettiFall 2.5s ease-out forwards;
+}
+
+
+/* DIFFERENT CONFETTI SHAPES */
+
+.confetti.circle {
+    border-radius: 50%;
+}
+
+.confetti.heart {
+    width: auto;
+    height: auto;
+    font-size: 22px;
+}
+
+
+/* CONFETTI ANIMATION */
+
+@keyframes confettiFall {
+
+    0% {
+        opacity: 1;
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    100% {
+        opacity: 0;
+        transform:
+            translate(var(--x), var(--y))
+            rotate(720deg);
+    }
+
+}
