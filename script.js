@@ -450,10 +450,4 @@ function revealPolaroids() {
 
 }
 
-window.addEventListener("load", () => {
 
-    setTimeout(() => {
-        revealPolaroids();
-    }, 1000);
-
-});
