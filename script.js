@@ -345,15 +345,15 @@ function launchConfetti() {
     const container = document.getElementById("confetti-container");
 
     const colors = [
-        "#ff6b9a",
-        "#ffd166",
-        "#a8dadc",
-        "#cdb4db",
-        "#90dbf4",
-        "#ffadad"
+        "#ff4081",
+        "#ffcc33",
+        "#7dd3fc",
+        "#c084fc",
+        "#fb7185",
+        "#4ade80",
+        "#f97316"
     ];
 
-    // Create confetti from different corners
     const corners = [
         { x: "0%", y: "0%" },
         { x: "100%", y: "0%" },
@@ -361,7 +361,8 @@ function launchConfetti() {
         { x: "100%", y: "100%" }
     ];
 
-    for (let i = 0; i < 80; i++) {
+    // 🎉 Create lots of large confetti
+    for (let i = 0; i < 180; i++) {
 
         const confetti = document.createElement("div");
 
@@ -370,49 +371,62 @@ function launchConfetti() {
 
         confetti.classList.add("confetti");
 
-        // Occasionally add hearts
-        if (Math.random() > 0.85) {
+        const color =
+            colors[Math.floor(Math.random() * colors.length)];
+
+        // 💖 Hearts
+        if (Math.random() > 0.88) {
 
             confetti.classList.add("heart");
             confetti.innerHTML = "♥";
-
-            confetti.style.color =
-                colors[Math.floor(Math.random() * colors.length)];
+            confetti.style.color = color;
 
         } else {
 
-            confetti.style.backgroundColor =
-                colors[Math.floor(Math.random() * colors.length)];
+            confetti.style.backgroundColor = color;
 
-            // Occasionally make circles
+            // 🔵 Some circular pieces
             if (Math.random() > 0.7) {
                 confetti.classList.add("circle");
             }
+
+            // Random sizes for a more natural explosion
+            const size =
+                Math.floor(Math.random() * 25 + 15);
+
+            confetti.style.width = size + "px";
+            confetti.style.height =
+                Math.floor(size * 0.7) + "px";
         }
 
+        // Starting position
         confetti.style.left = randomCorner.x;
         confetti.style.top = randomCorner.y;
 
-        // Random explosion direction
+        // 💥 Large explosion movement
         const randomX =
-            Math.floor(Math.random() * 800 - 400) + "px";
+            Math.floor(Math.random() * 1800 - 900) + "px";
 
         const randomY =
-            Math.floor(Math.random() * 800 - 400) + "px";
+            Math.floor(Math.random() * 1400 - 700) + "px";
 
         confetti.style.setProperty("--x", randomX);
         confetti.style.setProperty("--y", randomY);
 
-        // Random delay
+        // Different animation speeds
+        confetti.style.animationDuration =
+            (2 + Math.random() * 2) + "s";
+
+        // Slight delays make the explosion feel natural
         confetti.style.animationDelay =
-            Math.random() * 0.5 + "s";
+            Math.random() * 0.4 + "s";
 
         container.appendChild(confetti);
 
         // Remove after animation
         setTimeout(() => {
             confetti.remove();
-        }, 3500);
+        }, 4500);
 
     }
 
