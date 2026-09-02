@@ -276,8 +276,16 @@ function checkPassword() {
 
     if (enteredPassword === correctPassword) {
 
+       //  🎉 Launch the confetti first
         launchConfetti();
 
+        // Start revealing the Polaroids
+    setTimeout(() => {
+
+        revealPolaroids();
+
+    }, 400);
+        
         errorMessage.textContent = "";
 
         scrapbook.classList.add("show");
@@ -407,5 +415,21 @@ function launchConfetti() {
         }, 3500);
 
     }
+
+}
+
+function revealPolaroids() {
+
+    const polaroids = document.querySelectorAll(".polaroid");
+
+    polaroids.forEach((polaroid, index) => {
+
+        setTimeout(() => {
+
+            polaroid.classList.add("show-polaroid");
+
+        }, index * 250);
+
+    });
 
 }
