@@ -279,12 +279,13 @@ function checkPassword() {
        //  🎉 Launch the confetti first
         launchConfetti();
 
-        // Start revealing the Polaroids
+       // 📸 Reveal Polaroids one by one
+    setTimeout(() => {
         revealPolaroids();
+    }, 400);
 
-    }    
        
-       errorMessage.textContent = "";
+        errorMessage.textContent = "";
 
         scrapbook.classList.add("show");
         passwordScreen.classList.add("unlocked");
