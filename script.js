@@ -282,9 +282,9 @@ function checkPassword() {
         // Start revealing the Polaroids
         revealPolaroids();
 
-    }, 400);
-        
-        errorMessage.textContent = "";
+    }    
+       
+       errorMessage.textContent = "";
 
         scrapbook.classList.add("show");
         passwordScreen.classList.add("unlocked");
