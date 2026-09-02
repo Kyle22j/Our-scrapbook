@@ -280,8 +280,6 @@ function checkPassword() {
         launchConfetti();
 
         // Start revealing the Polaroids
-    setTimeout(() => {
-
         revealPolaroids();
 
     }, 400);
@@ -438,12 +436,24 @@ function revealPolaroids() {
 
     polaroids.forEach((polaroid, index) => {
 
+        // Remove the class first in case the animation
+        // has previously been triggered
+        polaroid.classList.remove("show-polaroid");
+
         setTimeout(() => {
 
             polaroid.classList.add("show-polaroid");
 
-        }, index * 250);
+        }, 500 + (index * 300));
 
     });
 
 }
+
+window.addEventListener("load", () => {
+
+    setTimeout(() => {
+        revealPolaroids();
+    }, 1000);
+
+});
