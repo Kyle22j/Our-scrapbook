@@ -265,7 +265,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function checkPassword() {
-    const correctPassword = "2024";
+    const correctPassword = "06/09/2024";
 
     const passwordInput = document.getElementById("password-input");
     const passwordScreen = document.getElementById("password-screen");
