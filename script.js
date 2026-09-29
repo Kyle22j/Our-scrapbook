@@ -251,6 +251,47 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+   // Video Cover Click //
+
+const videoCovers = document.querySelectorAll('.video-cover');
+
+videoCovers.forEach(function(cover) {
+    cover.addEventListener('click', function() {
+        const group = cover.getAttribute('data-video-group');
+
+        //Change modal title
+        modalTitle.textContent = cover.querySelector('.cover-title').textContent;
+        modalMessage.textContent = "Here are some of our favorite moments 💕";
+
+    
+
+        //Add video dependingon which cover was clicked
+        if (group === "1") {
+            modalPhotos.innerHTML = `
+            <video controls width="100%" style="margin-bottom: 15px;">
+                <source src="videos/Video5" type="video/mp4">
+            </video>
+            <video controls width="100%" style="margin-bottom: 15px;">
+                <source src="videos/Video6" type="video/mp4">
+            </video>
+            <video controls width="100%" style="margin-bottom: 15px;">
+                <source src="videos/Video7" type="video/mp4">
+            </video>
+            <video controls width="100%" style="margin-bottom: 15px;">
+                <source src="videos/Video8" type="video/mp4">
+            </video>
+            <video controls width="100%" style="margin-bottom: 15px;">
+                <source src="videos/Video9" type="video/mp4">
+            </video>
+        `;
+   }
+
+          // Show the modal
+          modal.style.display = 'flex';
+   });
+});
+ 
+
     // Close modal
     closeBtn.addEventListener('click', function() {
         modal.style.display = 'none';
@@ -264,6 +305,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 });
 
+ // Password section
 function checkPassword() {
     const correctPassword = "04/09/2024";
 
@@ -450,47 +492,6 @@ function revealPolaroids() {
     });
 
 }
-
-// Video Cover Click //
-
-const videoCovers = document.querySelectorAll('.video-cover');
-
-videoCovers.forEach(function(cover) {
-    cover.addEventListener('click', function() [
-        const group = cover.getAttribute('data-video-group');
-
-        //Change modal title
-        modalTitle.textContent = cover.querySelector('.cover-title').textContent;
-        modalMessge.textContent = "Here are some of our favorite moments 💕";
-
-        //Clear previous content
-        modalPhotos.innerHTML = "";
-
-        //Add video dependingon which cover was clicked
-        if (group === "1") {
-            modalPhotos.innerHTML = `
-            <video controls width="100%" style="margin-bottom: 12px;">
-                <source src="videos/Video5" type="video/mp4">
-            </video>
-            <video controls width="100%" style="margin-bottom: 12px;">
-                <source src="videos/Video6" type="video/mp4">
-            </video>
-            <video controls width="100%" style="margin-bottom: 12px;">
-                <source src="videos/Video7" type="video/mp4">
-            </video>
-            <video controls width="100%" style="margin-bottom: 12px;">
-                <source src="videos/Video8" type="video/mp4">
-            </video>
-            <video controls width="100%" style="margin-bottom: 12px;">
-                <source src="videos/Video9" type="video/mp4">
-            </video>
-        `;
-   }
-
-          // Show the modal
-          modal.style.display = 'flex';
-   });
-});
 
     
 
