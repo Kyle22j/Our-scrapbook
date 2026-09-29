@@ -545,19 +545,32 @@ header p {
 
 /* VIDEOS SECTION */
 .videos-section {
-    max-width: 110px;
+    max-width: 900px;
     margin: 80px auto;
     padding: 0 20px;
     text-align: center;
 }
 
-.videos-container {
-    backrgound: #fff9f5;
+.video-covers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.videos-cover {
+    backrgound: #fffdf9;
     border: 4px solid #e07a5f;
-    box-shadow: 12px 14px 0 #f7c5b8;
-    padding: 40px 30px;
+    box-shadow: 8px 12px 0 #f7c5b8;
+    padding: 15px 15px 25px;
     border-radius: 8px;
     text-align: center;
+    width: 240px;
+    position: relative;
+    transform: rotate(-3deg);
+    transition: 0.3s ease;
+    cursor: pointer;  
 }
 
 .section-title {
@@ -591,17 +604,22 @@ header p {
     transition: 0.3s ease;
 }
 
-.video-polaroid:nth-child(2) {
-    transform: scale(1.05) rotate(2deg);
+.video-cover:nth-child(2) {
+    transform: rotate(3deg);
 }
+
+.video-cover:hover {
+    transform: scale(1.07) rotate(0deg);
+}
+
 
 .washi-tape {
     position: absolute;
-    top: -14px;
+    top: -12px;
     left: 50%;
-    transform: translateX(-50%) rotate(-3deg);
-    width: 110px;
-    height: 24px;
+    transform: translateX(-50%) rotate(-2deg);
+    width: 90px;
+    height: 20px;
     background: repeating-linear-gradient(
         45deg,
         #ff9a8b,
@@ -611,11 +629,11 @@ header p {
     );
 }
 
-.polaroid-title {
+.cover-title {
     font-family: 'Caveat', cursive;
-    font-size: 1.9rem;
+    font-size: 1.7rem;
     color: #e85a4f;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
 .videos-inside {
@@ -624,19 +642,21 @@ header p {
     gap: 12px;
 }
 
-.video-inside video {
+.cover-image {
     width: 100%;
     height: 160px;
     object-fit: cover;
-    display: block;
+    display: flex;
     background: #fce8e0;
+    font-size: 4rem;
+    align-items: center;
     border: 2px solid #f0c7b0;
 }
 
-.polaroid-caption {
-    margin-top: 16px;
+.cover-caption {
+    margin-top: 4px;
     font-family: 'Indie Flower', cursive;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     color: #c26d5a;
 }
     
