@@ -470,19 +470,19 @@ videoCovers.forEach(function(cover) {
         if (group === "1") {
             modalPhotos.innerHTML = `
             <video controls width="100%" style="margin-bottom: 12px;">
-                <source src="videos/Video1" type="video/mp4">
-            </video>
-            <video controls width="100%" style="margin-bottom: 12px;">
-                <source src="videos/Video2" type="video/mp4">
-            </video>
-            <video controls width="100%" style="margin-bottom: 12px;">
-                <source src="videos/Video3" type="video/mp4">
-            </video>
-            <video controls width="100%" style="margin-bottom: 12px;">
-                <source src="videos/Video4" type="video/mp4">
-            </video>
-            <video controls width="100%" style="margin-bottom: 12px;">
                 <source src="videos/Video5" type="video/mp4">
+            </video>
+            <video controls width="100%" style="margin-bottom: 12px;">
+                <source src="videos/Video6" type="video/mp4">
+            </video>
+            <video controls width="100%" style="margin-bottom: 12px;">
+                <source src="videos/Video7" type="video/mp4">
+            </video>
+            <video controls width="100%" style="margin-bottom: 12px;">
+                <source src="videos/Video8" type="video/mp4">
+            </video>
+            <video controls width="100%" style="margin-bottom: 12px;">
+                <source src="videos/Video9" type="video/mp4">
             </video>
         `;
    }
