@@ -275,13 +275,13 @@ videoCovers.forEach(function(cover) {
                 <source src="videos/Video6.mp4" type="video/mp4">
             </video>
             <video controls width="100%" style="margin-bottom: 15px;">
-                <source src="videos/Video7.mp4" type="video/mp4">
+                <source src="videos/Video10.mp4" type="video/mp4">
             </video>
             <video controls width="100%" style="margin-bottom: 15px;">
-                <source src="videos/Video8.mp4" type="video/mp4">
+                <source src="videos/Video11.mp4" type="video/mp4">
             </video>
             <video controls width="100%" style="margin-bottom: 15px;">
-                <source src="videos/Video9.mp4" type="video/mp4">
+                <source src="videos/Video12.mp4" type="video/mp4">
             </video>
         `;
    }
