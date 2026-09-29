@@ -317,14 +317,19 @@ function checkPassword() {
     const enteredPassword = passwordInput.value;
 
     if (enteredPassword === correctPassword) {
-
-       //  🎉 Launch the confetti first
         launchConfetti();
 
+    
+        const scrapbook = document.getElementById("scrapbook-content");
+
+        // Show content
+        scrapbook.style.display = "block";
+        scrapbook.classList.add("show);
+
        // 📸 Reveal Polaroids one by one
-    setTimeout(() => {
+    setTimeout(function()  {
         revealPolaroids();
-    }, 400);
+    }, 500);
 
        
         errorMessage.textContent = "";
@@ -334,7 +339,7 @@ function checkPassword() {
 
         setTimeout(function () {
             passwordScreen.style.display = "none";
-        }, 800);
+        }, 900);
 
     } else {
 
@@ -477,13 +482,11 @@ function revealPolaroids() {
 
     const polaroids = document.querySelectorAll(".polaroid");
 
-    polaroids.forEach((polaroid, index) => {
+    polaroids.forEach(function(polaroid, index)  {
 
-        // Remove the class first in case the animation
-        // has previously been triggered
         polaroid.classList.remove("show-polaroid");
 
-        setTimeout(() => {
+        setTimeout(function()  {
 
             polaroid.classList.add("show-polaroid");
 
