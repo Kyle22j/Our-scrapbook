@@ -451,4 +451,46 @@ function revealPolaroids() {
 
 }
 
+// Video Cover Click //
+
+const videoCovers = document.querySelectorAll('.video-cover');
+
+videoCovers.forEach(function(cover) {
+    cover.addEventListener('click', function() [
+        const group = cover.getAttribute('data-video-group');
+
+        //Change modal title
+        modalTitle.textContent = cover.querySelector('.cover-title').textContent;
+        modalMessge.textContent = "Here are some of our favorite moments 💕";
+
+        //Clear previous content
+        modalPhotos.innerHTML = "";
+
+        //Add video dependingon which cover was clicked
+        if (group === "1") {
+            modalPhotos.innerHTML = `
+            <video controls width="100%" style="margin-bottom: 12px;">
+                <source src="videos/Video1" type="video/mp4">
+            </video>
+            <video controls width="100%" style="margin-bottom: 12px;">
+                <source src="videos/Video2" type="video/mp4">
+            </video>
+            <video controls width="100%" style="margin-bottom: 12px;">
+                <source src="videos/Video3" type="video/mp4">
+            </video>
+            <video controls width="100%" style="margin-bottom: 12px;">
+                <source src="videos/Video4" type="video/mp4">
+            </video>
+            <video controls width="100%" style="margin-bottom: 12px;">
+                <source src="videos/Video5" type="video/mp4">
+            </video>
+        `;
+   }
+
+          // Show the modal
+          modal.style.display = 'flex';
+   });
+});
+
+    
 
