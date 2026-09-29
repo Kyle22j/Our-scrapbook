@@ -286,6 +286,25 @@ videoCovers.forEach(function(cover) {
         `;
    }
 
+        if (group === "2") {
+            modalPhotos.innerHTML = `
+            <video controls width="100%" style="margin-bottom: 15px;">
+                <source src="./videos/Video13.mp4" type="video/mp4">
+            </video>
+            <video controls width="100%" style="margin-bottom: 15px;">
+                <source src="./videos/Video15.mp4" type="video/mp4">
+            </video>
+            <video controls width="100%" style="margin-bottom: 15px;">
+                <source src="./videos/Video9.mp4" type="video/mp4">
+            </video>
+            <video controls width="100%" style="margin-bottom: 15px;">
+                <source src="./videos/Video22.mp4" type="video/mp4">
+            </video>
+            <video controls width="100%" style="margin-bottom: 15px;">
+                <source src="./videos/Video25.mp4" type="video/mp4">
+            </video>
+        `;
+   }
           // Show the modal
           modal.style.display = 'flex';
    });
