@@ -327,7 +327,7 @@ function checkPassword() {
         scrapbook.style.display = "block";
         scrapbook.style.opacity = "1";
         scrapbook.style.visibility = "visible";
-        scrapbook.classList.add("show);
+        scrapbook.classList.add("show");
 
        // 📸 Reveal Polaroids one by one
     setTimeout(function()  {
