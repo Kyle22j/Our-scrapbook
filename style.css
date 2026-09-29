@@ -660,4 +660,30 @@ header p {
     color: #c26d5a;
 }
     
-    
+ /* FIX FOR BLANK PAGE AFTER PASSWORD */
+
+#scrapbook-content {
+    display: none;
+}
+
+#scrapbook-content.show {
+    display: block !important;
+    animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Polaroid animation */
+.polaroid {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+    transition: all 0.6s ease;
+}
+
+.polaroid.show-polaroid {
+    opacity: 1 !important;
+    transform: translateY(0) scale(1) !important;
+}   
