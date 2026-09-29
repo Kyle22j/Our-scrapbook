@@ -321,9 +321,12 @@ function checkPassword() {
 
     
         const scrapbook = document.getElementById("scrapbook-content");
-
+        const passwordScreen = document.getElementById("password-screen");
+        
         // Show content
         scrapbook.style.display = "block";
+        scrapbook.style.opacity = "1";
+        scrapbook.style.visibility = "visible";
         scrapbook.classList.add("show);
 
        // 📸 Reveal Polaroids one by one
@@ -334,7 +337,6 @@ function checkPassword() {
        
         errorMessage.textContent = "";
 
-        scrapbook.classList.add("show");
         passwordScreen.classList.add("unlocked");
 
         setTimeout(function () {
